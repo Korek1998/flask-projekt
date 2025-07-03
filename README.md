@@ -1,5 +1,9 @@
 # Aplikacja Flask – Projekt do laboratoriów
 
+**pogrubienie**
+
+
+
 Prosta aplikacja webowa w Flasku z 3 dostępnymi trasami:
 - `/` – strona główna
 - `/message` – komunikat JSON
