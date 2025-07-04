@@ -5,13 +5,14 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return '''
-        <h1>Wersja A naglowka = Witaj w aplikacji Flask/header-a</h1>
+        <h1>Wersja A – nagłówek z feature/header-a</h1>
         <nav>
             <a href="/">Strona główna</a> |
             <a href="/message">Wiadomość</a> |
             <a href="/health">Status</a>
         </nav>
     '''
+
 
 @app.route('/message')
 def message():
