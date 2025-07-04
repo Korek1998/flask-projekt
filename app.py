@@ -18,7 +18,7 @@ def home():
 
 @app.route('/message')
 def message():
-    return jsonify(message="to jest komunikat z servera flask")
+    return jsonify(message="to jest poprawiony(PATCH) komunikat z servera flask")
 
 @app.route('/health')
 def health():
