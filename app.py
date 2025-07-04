@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -28,6 +28,13 @@ def health():
 def contact():
     return "<p>To jest nowa podstrona kontaktowa – dodana jako MINOR</p>"
 
+from flask import request
+
+@app.route('/add')
+def add():
+    a = int(request.args.get('a', 0))
+    b = int(request.args.get('b', 0))
+    return jsonify(operation="add", result=a + b)
 
 
 
