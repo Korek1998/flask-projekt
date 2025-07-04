@@ -4,7 +4,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "<h1>to jest aplikacja flask</h1>"
+    return '''
+        <h1>Witaj w aplikacji Flask!</h1>
+        <nav>
+            <a href="/">Strona główna</a> |
+            <a href="/message">Wiadomość</a> |
+            <a href="/health">Status</a>
+        </nav>
+    '''
 
 @app.route('/message')
 def message():
