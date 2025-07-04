@@ -36,6 +36,9 @@ def add():
     b = int(request.args.get('b', 0))
     return jsonify(operation="add", result=a + b)
 
+@app.route('/square/<int:n>')
+def square(n):
+    return jsonify(operation="square", result=n * n)
 
 
 if __name__ == '__main__':

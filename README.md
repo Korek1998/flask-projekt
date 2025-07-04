@@ -18,6 +18,12 @@ Prosta aplikacja webowa w Flasku z 3 dostępnymi trasami:
 - Git + GitHub
 
 
+## Endpointy
+
+- `/square/<n>` – zwraca n² jako wynik działania kalkulatora
+
+## Przykład:
+GET `/square/6` → `{"result": 36}`
 
 
 ```bash
