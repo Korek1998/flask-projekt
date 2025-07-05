@@ -23,17 +23,7 @@ def message():
 
 @app.route('/health')
 def health():
-    return jsonify(status="OK")'''
-
-	<nav>
-            <a href="/">Strona główna</a> |
-            <a href="/msg">Wiadomość</a> |
-            <a href="/health">Status</a>
-            <a href="/add">Dodawania</a>
-
-	</nav>
-     '''
-
+    return jsonify(status="OK")
 
 @app.route('/contact')
 def contact():
@@ -60,8 +50,6 @@ def add_ui():
         <h1>Kalkulator Flask</h1>
         <nav>
             <a href="/">Strona główna</a> |
-            <a href="/add">Kalkulator</a> |
-            <a href="/health">Status</a>
         </nav>
 
         <div class="calc-box">
