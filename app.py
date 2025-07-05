@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return '''
-        <h1>wspolna wersja A i B naglowka = Witaj w aplikacji Flask/header>
+        <h1>Kalkulator Flask</h1>
 
         <nav>
 
@@ -62,7 +62,6 @@ def add_ui():
             <button onclick="calculate('+')">Dodaj</button>
             <button onclick="calculate('-')">Odejmij</button>
             <button onclick="calculate('*')">Pomnóż</button>
-            <button onclick="calculate('/')">Podziel</button>
             <div id="result"></div>
         </div>
 
@@ -113,14 +112,6 @@ def multiply():
     a = int(request.args.get('a', 0))
     b = int(request.args.get('b', 0))
     return jsonify(result=a * b)
-
-@app.route('/%2F')  # lub '/div'
-def divide():
-    a = int(request.args.get('a', 1))
-    b = int(request.args.get('b', 1))
-    if b == 0:
-        return jsonify(error="Nie można dzielić przez 0")
-    return jsonify(result=a / b)
 
 
 
