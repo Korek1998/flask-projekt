@@ -1,0 +1,27 @@
+name: Python CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout kodu
+      uses: actions/checkout@v4
+
+    - name: Ustaw Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Instalacja zależności
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Uruchom testy
+      run: |
+        source venv/bin/activate
+        pytest
