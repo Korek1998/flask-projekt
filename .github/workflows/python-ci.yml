@@ -15,13 +15,11 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Instalacja zależności
+    - name: Zainstaluj zależności
       run: |
-        python -m venv venv
-        source venv/bin/activate
         pip install -r requirements.txt
 
     - name: Uruchom testy
       run: |
-        source venv/bin/activate
         pytest
+
