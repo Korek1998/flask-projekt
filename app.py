@@ -30,7 +30,7 @@ def contact():
     return "<p>To jest nowa podstrona kontaktowa – dodana jako MINOR</p>"
 
 
-@app.route('/add-ui')
+@app.route('/add')
 def add_ui():
     return '''
     <!DOCTYPE html>
