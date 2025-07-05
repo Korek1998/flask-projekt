@@ -45,6 +45,20 @@ Prosta aplikacja webowa w Flasku z 3 dostępnymi trasami:
 Dostępny pod `/add-ui` – umożliwia łatwe wpisanie liczb i wybór działania bez przeładowywania strony.
 
 
+# 1. Zbuduj obraz Dockera
+docker build -t flask-kalkulator .
+
+# 2. Uruchom kontener
+docker run -p 5000:5000 flask-kalkulator
+
+# 3. Wejdź w przeglądarce:
+http://localhost:5000
+
+
+
+
+
+
 
 ```bash
 pip install -r requirements.txt
