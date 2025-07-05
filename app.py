@@ -10,9 +10,9 @@ def home():
         <nav>
 
             <a href="/">Strona główna</a> |
-            <a href="/message">Wiadomość</a> |
+            <a href="/msg">Wiadomość</a> |
             <a href="/health">Status</a>
-	    <a href="/add-ui">Dodawania</a>
+	    <a href="/add">Dodawania</a>
         </nav>
     '''
 
@@ -50,7 +50,7 @@ def add_ui():
         <h1>Kalkulator Flask</h1>
         <nav>
             <a href="/">Strona główna</a> |
-            <a href="/add-ui">Kalkulator</a> |
+            <a href="/add">Kalkulator</a> |
             <a href="/health">Status</a>
         </nav>
 
@@ -121,9 +121,8 @@ def multiply():
 def square(n):
     return jsonify(operation="square", result=n * n)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
 
 
 
