@@ -19,7 +19,7 @@ https://flask-projekt-13ql.onrender.com/
 
 Prosta aplikacja webowa w Flasku z 3 dostępnymi trasami:
 - `/` – strona główna
-- `/message` – komunikat JSON
+- `/message` – przykladowa trasna, w przyszlosci rozwinieta
 - `/health` – status działania
 
 
@@ -32,7 +32,9 @@ Prosta aplikacja webowa w Flasku z 3 dostępnymi trasami:
 ## Endpointy
 
 - `/square/<n>` – zwraca n² jako wynik działania kalkulatora
-
+- `/add/<n>`- sciezka do kalkulatora 
+- `/health/<n>` - sprawdzenie stanu (pokazuje OK)
+ 
 
 ## Przykładowe użycie API:
 
@@ -47,7 +49,7 @@ Prosta aplikacja webowa w Flasku z 3 dostępnymi trasami:
 
 - `/add-ui` – graficzny kalkulator dodawania, odejmowania, mnożenia i dzielenia
 - `/add?a=2&b=3` – REST API do dodawania
-- `/subtract`, `/multiply`, `/divide` – inne operacje
+- `/subtract`,  `/*` – inne operacje
 - `/square/<n>` – zwraca n²
 
 
