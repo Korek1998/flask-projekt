@@ -3,6 +3,19 @@
 **pogrubienie**
 
 
+## CI/CD
+
+Projekt wykorzystuje GitHub Actions do automatycznego uruchamiania testów (`pytest`, `flake8`) przy każdym `push` i `pull request`.
+
+Po przejściu testów, aplikacja jest automatycznie wdrażana na Render.com poprzez zintegrowane repozytorium GitHub.
+
+- Wykorzystane narzędzia: GitHub Actions, Docker, pytest, flake8
+- Środowisko uruchomieniowe: Python 3.11, Flask
+
+https://flask-projekt-13ql.onrender.com/
+
+
+
 
 Prosta aplikacja webowa w Flasku z 3 dostępnymi trasami:
 - `/` – strona główna
