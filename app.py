@@ -82,7 +82,19 @@ def add_ui():
         </script>
     </body>
     </html>
+
     '''
+
+
+
+@app.route('/api/add')
+def add_api():
+    a = int(request.args.get('a', 0))
+    b = int(request.args.get('b', 0))
+    return jsonify(result=a + b)
+
+
+
 
 @app.route('/+')
 def add():
