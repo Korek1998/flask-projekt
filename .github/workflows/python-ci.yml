@@ -18,7 +18,13 @@ jobs:
     - name: Zainstaluj zależności
       run: |
         pip install -r requirements.txt
+        
+    - name: flake8 (styl kodu)
+      run: |
+        pip install flake8
+        flake8 . --exit-zero
 
+    
     - name: Uruchom testy
       run: |
         pytest
