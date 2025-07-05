@@ -21,9 +21,17 @@ def home():
 def message():
     return jsonify(message="to jest poprawiony(PATCH) komunikat z servera flask")
 
-@app.route('/health')
+from datetime import datetime
+import os
+
+@app.route("/health")
 def health():
-    return jsonify(status="OK")
+    return {
+        "status": "OK",
+        "timestamp": datetime.utcnow().isoformat(),
+        "version": os.getenv("APP_VERSION", "unknown")
+    }
+
 
 @app.route('/contact')
 def contact():
